@@ -8,4 +8,5 @@ z2.czy_pierwsza(0,1,2,3,4,5)
 
 print("==============zad3==============")
 import zad3 as z3
-z3.cezar("yz ji jij ",1)
+data = "The Project Gutenberg eBook of Alice’s Adventures in Wonderland, by Lewis Carroll"
+print(z3.cezar(data,5))

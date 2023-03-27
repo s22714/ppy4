@@ -8,11 +8,18 @@ def cezar(wiadomosc, klucz, alphabet = ['a', 'b', 'c', 'd', 'e',
     nowaWiadomosc = ""
 
     for letter in wiadomosc:
+        letter = letter.lower()
         if letter in alphabet:
             position = alphabet.index(letter)
             new_position = (position + klucz) % len(alphabet)
             nowaWiadomosc += alphabet[new_position]
         else:
-            nowaWiadomosc += letter
+            letter = letter.upper()
+            if letter in alphabet:
+                position = alphabet.index(letter)
+                new_position = (position + klucz) % len(alphabet)
+                nowaWiadomosc += alphabet[new_position]
+            else:
+                nowaWiadomosc += letter
 
-    print(nowaWiadomosc)
+    return nowaWiadomosc
